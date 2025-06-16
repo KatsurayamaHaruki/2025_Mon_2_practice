@@ -1,5 +1,5 @@
 from rsa_0 import is_prime, gcd
-
+import math
 # 1. 鍵生成関数
 
 def extended_gcd(a, b):
@@ -18,7 +18,7 @@ def mod_inverse(e, phi):
         raise ValueError("e_valとφ(n)は互いに素でなければなりません")
     return x % phi
 
-def generate_rsa_key(p, q, e_val):
+def generate_rsa_keys(p, q, e_val):
     if p == q:
         raise ValueError("pとqは異なる素数でなければなりません")
 
